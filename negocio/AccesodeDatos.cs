@@ -8,14 +8,14 @@ using System.Data.SqlClient;
 
 namespace negocio
 {
-    public class AccesoDatos
+    public class AccesodeDatos
     {
         //parametros para ingresar en la base de datos
-        private SqlConnection conexion;
-        private SqlCommand comando;
-        private SqlDataReader lector;
+        public SqlConnection conexion;
+        public SqlCommand comando;
+        public SqlDataReader lector;
 
-        public AccesoDatos()
+        public AccesodeDatos()
         {
             conexion = new SqlConnection("server=.\\SQLEXPRESS ; database=CATALOGO_WEB_DB ; integrated security = true");
             comando = new SqlCommand();

@@ -10,7 +10,7 @@ namespace TpFinalNivel3_Arteaga_Ponssa_Lucas
 {
     public partial class Default : System.Web.UI.Page
     {
-        public List<Articulo>
+        public List<Articulo> ListaArticulos { get; set; }
         public void Page_Load(object sender, EventArgs e)
         {
 
