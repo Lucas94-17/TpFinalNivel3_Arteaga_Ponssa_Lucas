@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 
-
 namespace negocio
 {
     public class AccesodeDatos
@@ -14,6 +13,10 @@ namespace negocio
         public SqlConnection conexion;
         public SqlCommand comando;
         public SqlDataReader lector;
+        public SqlDataReader Lector
+        {
+            get { return lector; }
+        }
 
         public AccesodeDatos()
         {
@@ -42,7 +45,6 @@ namespace negocio
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
         }
@@ -62,18 +64,29 @@ namespace negocio
         }
         public int ejecutarAccionScalar()
         {
+            if (comando == null)
+            {
+                throw new NullReferenceException("El comando no ha sido inicializado.");
+            }
+
+            if (conexion == null)
+            {
+                throw new NullReferenceException("La conexión no ha sido inicializada.");
+            }
+
             comando.Connection = conexion;
             try
             {
                 conexion.Open();
-                return int.Parse(comando.ExecuteScalar().ToString());
+                object result = comando.ExecuteScalar();
+                return int.Parse(result.ToString());
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
         }
+
         public void setearParametro(string nombre, object valor)
         {
             comando.Parameters.AddWithValue(nombre, valor);
