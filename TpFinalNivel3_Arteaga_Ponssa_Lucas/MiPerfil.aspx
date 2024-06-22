@@ -20,6 +20,8 @@
             txtApellido.classList.remove("is-invalid");
             txtApellido.classList.add("is-valid");
             return true;
+
+            
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -61,8 +63,7 @@
                 <asp:TextBox runat="server" ID="txtImagen" ClientIDMode="Static" OnTextChanged="txtImagen_TextChanged"></asp:TextBox>
             </div>
             <div class="mb-3">
-                <asp:Image ID="imgNuevoPerfil" runat="server" CssClass="img-fluid mb-3"
-                    ImageUrl="https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg" />
+                <asp:Image ID="imgNuevoPerfil" runat="server" CssClass="img-fluid mb-3"/>
             </div>
         </div>
     </div>

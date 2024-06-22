@@ -7,3 +7,17 @@ footer{
     text-align:center;
     background:red;
 }
+/*esto en la Default*/ 
+#imgEstilo {
+    height: 500px;
+    width: 100%;
+    align-items: flex-start
+}
+/*esto estaba en la master*/ 
+body{
+       background-color:darkgrey;
+    }
+footer{
+    text-align:center;
+    background-color:#6c757d;
+}

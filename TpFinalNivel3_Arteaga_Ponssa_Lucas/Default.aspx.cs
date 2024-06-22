@@ -19,7 +19,7 @@ namespace TpFinalNivel3_Arteaga_Ponssa_Lucas
             ArticuloNegocio Articulo = new ArticuloNegocio();
             ListaArticulos = Articulo.listar();
             Articulo art = new Articulo();
-            //art.urlImage.Load
+            
             if (!IsPostBack)
             {
                 Repetidor.DataSource = ListaArticulos;
