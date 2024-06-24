@@ -26,7 +26,7 @@ namespace TpFinalNivel3_Arteaga_Ponssa_Lucas
                 if (Validacion.validaTextoVacio(txtEmail.Text) || Validacion.validaTextoVacio(txtPass.Text))
                 {
                     Session.Add("error", "Debe completar ambos campos");
-                    //Response.Redirect("Error.aspx", false);
+                    Response.Redirect("Error.aspx", false);
                 }
                 trainee.Email = txtEmail.Text;
                 trainee.Pass = txtPass.Text;
@@ -39,7 +39,7 @@ namespace TpFinalNivel3_Arteaga_Ponssa_Lucas
                 else
                 {
                     Session.Add("error", "Debe completar ambos campos");
-                    //Response.Redirect("Error.aspx", false);
+                    Response.Redirect("Error.aspx", false);
                 }
             }
             catch (Exception)
@@ -48,5 +48,7 @@ namespace TpFinalNivel3_Arteaga_Ponssa_Lucas
                 throw;
             }
         }
+
+       
     }
 }

@@ -6,6 +6,9 @@
             font-size: 12px;
             color: red;
         }
+        p{
+            color :white;
+        }
     </style>
     <script>
         function validar() {
@@ -51,19 +54,16 @@
                 <%--<asp:RangeValidator ErrorMessage="Fuera de rango" Type="Integer" MinimumValue="1" MaximumValue="20" ControlToValidate="txtApellido" runat="server" />--%>
                 <%--<asp:RegularExpressionValidator ErrorMessage="Solo numeros !" ControlToValidate="txtApellido" ValidationExpression="^[0-9]+$" runat="server" />--%>
             </div>
-            <%--<div class="mb-3">
-                <label class="form-label">Fecha de Nacimiento</label>
-                <asp:TextBox runat="server" CssClass="form-control" ID="txtFechaNacimiento" TextMode="date"></asp:TextBox>
-            </div>--%>
+            
         </div>
         <div class="col-md-4">
             <div class="mb-3">
                 <label class="form-label">Imagen de Perfil</label>
-                <%--<input id="txtImagen" class="form-input" type="file" runat="server" />--%>
-                <asp:TextBox runat="server" ID="txtImagen" ClientIDMode="Static" OnTextChanged="txtImagen_TextChanged"></asp:TextBox>
+                <input id="txtImagen" class="form-input" type="file" runat="server" />
+                
             </div>
             <div class="mb-3">
-                <asp:Image ID="imgNuevoPerfil" runat="server" CssClass="img-fluid mb-3"/>
+                <asp:Image ID="imgNuevoPerfil" runat="server" CssClass="img-fluid mb-3" ImageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr64U1qrn_mnXFwQoOmiuJs1zp0aLvApc1WmtDk-_IywS0eg7pzlSCsqDNbUzJuPSRupo&usqp=CAU"/>
             </div>
         </div>
     </div>
@@ -73,4 +73,6 @@
             <a href="Default.aspx" class="btn btn-danger">Regresar</a>
         </div>
     </div>
+    <hr />
+    <p>NOTA : cambie su foto de perfil y ponga una personal</p>
 </asp:Content>

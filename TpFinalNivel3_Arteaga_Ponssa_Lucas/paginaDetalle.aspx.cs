@@ -28,6 +28,9 @@ namespace TpFinalNivel3_Arteaga_Ponssa_Lucas
             //cargar los elementos-
             lblDescripcion.Text = seleccionado.Descripcion;
             lblNombre.Text = seleccionado.Nombre.ToString();
+            lblPrecio.Text ="$" + seleccionado.Precio.ToString();
+            lblMarca.Text = seleccionado.Marca.Descripcion.ToString();
+            lblCategoria.Text = seleccionado.Categoria.Descripcion.ToString();
                 
                 string imagenUrl = seleccionado.urlImage.ToString();
 

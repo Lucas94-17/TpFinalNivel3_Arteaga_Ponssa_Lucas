@@ -65,7 +65,7 @@
         <asp:GridView ID="dgvArticulos" runat="server" CssClass="table"
             AutoGenerateColumns="false" DataKeyNames="Id"
             OnSelectedIndexChanged="dgvArticulos_SelectedIndexChanged"
-            OnPageIndexChanging="dgvArticulos_PageIndexChanging" AllowPaging="true" PageSize="4" data-bs-theme="dark">
+            OnPageIndexChanging="dgvArticulos_PageIndexChanging" AllowPaging="true"  data-bs-theme="dark">
             <Columns>
                 <asp:BoundField HeaderText="Nombre" DataField="Nombre" />
                 <asp:BoundField HeaderText="Marca" DataField="Marca" />

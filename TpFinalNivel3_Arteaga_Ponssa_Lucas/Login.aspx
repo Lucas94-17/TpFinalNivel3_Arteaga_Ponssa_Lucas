@@ -3,6 +3,8 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="form-control" data-bs-theme="dark">
+        <h2>Ingreso</h2>
+        <hr />
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Correo Electrónico</label>
             <asp:TextBox runat="server" ID="txtEmail" CssClass="form-control"></asp:TextBox>
@@ -22,5 +24,8 @@
             </asp:RequiredFieldValidator>
         </div>
         <asp:Button runat="server" Text="Ingresar" ID="btnLoguearse" OnClick="btnLoguearse_Click" CssClass="btn btn-success"/>
+        <hr />
+        <p>Si aún no posees una cuenta , ingresa aquí : </p>
+        <a href="Registro.aspx" class="btn btn-primary">Registrarse</a>
     </div>
 </asp:Content>

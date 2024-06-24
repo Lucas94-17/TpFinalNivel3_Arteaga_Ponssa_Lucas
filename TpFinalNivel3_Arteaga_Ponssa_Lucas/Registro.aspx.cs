@@ -19,7 +19,7 @@ namespace TpFinalNivel3_Arteaga_Ponssa_Lucas
 
         protected void btnRegistro_Click(object sender, EventArgs e)
         {
-            
+
             try
             {
                 Trainee user = new Trainee();
@@ -28,22 +28,28 @@ namespace TpFinalNivel3_Arteaga_Ponssa_Lucas
                 user.Apellido = txtApellido.Text;
                 user.Email = txtEmail.Text;
                 user.Pass = txtPass.Text;
-                user.urlImagenPerfil = txtUrlImagen.Text;
+                //user.urlImagenPerfil = txtUrlImagen.Text;
+                //if (txtImagen.PostedFile.FileName != "")
+                //{
+                //    string ruta = Server.MapPath("./Img/");
+                //    txtImagen.PostedFile.SaveAs(ruta + "perfil-" + user.Nombre + ".jpg");
+                //    user.urlImagenPerfil = "perfil-" + user.Nombre + ".jpg";
+                //}
+                //Image imgAvatar = (Image)Master.FindControl("imgAvatar");
+                //imgAvatar.ImageUrl = "~/Img/" + user.urlImagenPerfil;
+                user.urlImagenPerfil ="imagenes-de-usuario" + ".png";
                 user.Id = traineeNegocio.insertarNuevo(user);
-                Session.Add("trainee", user);              
-                Response.Redirect("Default.aspx", false);
-                
+                Session.Add("trainee", user);
+                Response.Redirect("MiPerfil.aspx", false);
+
 
             }
-            catch (Exception ex )
+            catch (Exception ex)
             {
                 Session.Add("error", ex.ToString());
             }
         }
 
-        protected void txtUrlImagen_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
+        
     }
 }

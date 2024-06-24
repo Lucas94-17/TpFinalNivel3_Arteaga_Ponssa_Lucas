@@ -74,11 +74,11 @@ namespace negocio
             AccesodeDatos datos = new AccesodeDatos();
             try
             {
-                datos.setearConsulta("Update USERS set urlImagenPerfil = @urlImagenPerfil , nombre = @nombre , apellido = @apellido , email = @email , pass = @pass where Id = @Id");
+                datos.setearConsulta("Update USERS set urlImagenPerfil = @urlImagenPerfil , nombre = @nombre , apellido = @apellido ,  pass = @pass where Id = @Id");
                 datos.setearParametro("@Id" , user.Id);
                 datos.setearParametro("@apellido",user.Apellido);
                 datos.setearParametro("@nombre",user.Nombre);
-                datos.setearParametro("@urlImagenPerfil",(object)user.urlImagenPerfil?? DBNull.Value);
+                datos.setearParametro("@urlImagenPerfil", (object)user.urlImagenPerfil ?? DBNull.Value);
                 datos.setearParametro("@pass", user.Pass);
 
                 datos.ejecutarAccion();

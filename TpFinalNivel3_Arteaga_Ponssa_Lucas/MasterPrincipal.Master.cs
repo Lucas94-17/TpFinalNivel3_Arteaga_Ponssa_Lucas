@@ -14,7 +14,7 @@ namespace TpFinalNivel3_Arteaga_Ponssa_Lucas
         {
             imgAvatar.ImageUrl = "../Img/imagenes-de-usuario.png";
 
-            if (!(Page is Login || Page is Registro || Page is Default || Page is Pagina_detalle))
+            if (!(Page is Login || Page is Registro ))
             {
                 if (!(Seguridad.sesionActiva(Session["trainee"])))
                 {
@@ -26,7 +26,7 @@ namespace TpFinalNivel3_Arteaga_Ponssa_Lucas
                     lblUser.Text = user.Email;
                     if (!string.IsNullOrEmpty(user.urlImagenPerfil))
                     {
-                        imgAvatar.ImageUrl = user.urlImagenPerfil;
+                        imgAvatar.ImageUrl = "~/Img/" + user.urlImagenPerfil;
                     }
                 }
             }

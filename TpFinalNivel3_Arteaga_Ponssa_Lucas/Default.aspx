@@ -8,13 +8,7 @@
             imgElement.src = imgAux;
         }
     </script>
-    <style>
-        #imgEstilo {
-            height: 500px;
-            width: 100%;
-            align-items: flex-start
-        }
-    </style>
+    
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h1>Bienvenidos a LucArt</h1>
@@ -25,8 +19,8 @@
                     <div class="card">
                         <img src="<%#Eval("urlImage") %>" class="card-img-top" alt="..." id="imgEstilo" onerror='handleImageError(this, "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr64U1qrn_mnXFwQoOmiuJs1zp0aLvApc1WmtDk-_IywS0eg7pzlSCsqDNbUzJuPSRupo&usqp=CAU")'>
                         <div class="card-body">
-                            <h5 class="card-title"><%#Eval("Nombre") %></h5>
-                            <p class="card-text"><%#Eval("Descripcion") %></p>
+                            <p class="card-title"><%#Eval("Nombre") %></p>
+                            <h4 class="card-text">$<%#Eval("Precio") %></h4>
                             <asp:Button runat="server" CssClass="btn btn-primary" Text="Ver detalle" ID="btnVerDetalle" CommandArgument='<%#Eval("Id") %>' CommandName="ArticuloId" OnClick="btnDetalle_click" />
                         </div>
                     </div>

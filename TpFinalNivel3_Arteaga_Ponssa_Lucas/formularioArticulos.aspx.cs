@@ -90,7 +90,6 @@ namespace TpFinalNivel3_Arteaga_Ponssa_Lucas
                 if (Request.QueryString["id"] != null)
                 {
                     articulo.Id = int.Parse(txtId.Text);
-                    //Console.WriteLine(articulo.Id);
                     negocio.modificar(articulo);
                     Response.Redirect("ListarArticulo.aspx", false);
                 }
